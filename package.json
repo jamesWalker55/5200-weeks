@@ -1,6 +1,6 @@
 {
   "name": "5200-weeks",
-  "module": "index.ts",
+  "module": "src/index.ts",
   "type": "module",
   "private": true,
   "devDependencies": {
