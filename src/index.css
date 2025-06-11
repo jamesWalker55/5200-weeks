@@ -1,1 +1,114 @@
 @import url("nuke.css");
+
+html {
+  background-color: #002f58;
+  color: #fbfafd;
+
+  /* tailwind font style */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  --dot-gap: calc(1rem * 3 / 16);
+  --dot-size: calc(1rem * 11 / 16);
+  /* --dot-size: calc(1rem * 12 / 16); */
+}
+
+#weeks {
+  display: grid;
+  width: min-content;
+  gap: var(--dot-gap);
+  /* temp */
+  /* background-color: black; */
+
+  /* dot widths */
+  grid-template-columns: repeat(104, min-content);
+  @media (width < 104rem) {
+    grid-template-columns: repeat(100, min-content);
+  }
+  @media (width < 96rem) {
+    grid-template-columns: repeat(80, min-content);
+  }
+  @media (width < 80rem) {
+    grid-template-columns: repeat(65, min-content);
+  }
+  @media (width < 64rem) {
+    grid-template-columns: repeat(52, min-content);
+  }
+  @media (width < 52rem) {
+    grid-template-columns: repeat(40, min-content);
+  }
+  @media (width < 40rem) {
+    grid-template-columns: repeat(32, min-content);
+  }
+}
+
+.week {
+  width: var(--dot-size);
+  height: var(--dot-size);
+  border-radius: 50%;
+}
+
+.bg-red {
+  background-color: #ef2f58;
+}
+.color-red {
+  color: #ef2f58;
+}
+.bg-blue {
+  background-color: #0fa4fc;
+}
+.color-blue {
+  color: #0fa4fc;
+}
+.bg-blue-dim {
+  background-color: #0b4e92;
+}
+.color-blue-dim {
+  color: #0b4e92;
+}
+.bg-blue-dark {
+  background-color: #031f3d;
+}
+.color-blue-dark {
+  color: #031f3d;
+}
+.bg-yellow {
+  background-color: #f9ca11;
+}
+.color-yellow {
+  color: #f9ca11;
+}
+.bg-orange {
+  background-color: #f89a0e;
+}
+.color-orange {
+  color: #f89a0e;
+}
+.bg-blue-alt {
+  background-color: #619dd7;
+}
+.color-blue-alt {
+  color: #619dd7;
+}
+.bg-purple {
+  background-color: #7f125a;
+}
+.color-purple {
+  color: #7f125a;
+}
