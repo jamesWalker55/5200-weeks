@@ -18,7 +18,7 @@ body {
 }
 
 #main {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -26,36 +26,58 @@ body {
 
   --dot-gap: calc(1rem * 3 / 16);
   --dot-size: calc(1rem * 11 / 16);
-  /* --dot-size: calc(1rem * 12 / 16); */
+  --max-h-dots: 104;
 }
 
 #weeks {
-  display: grid;
-  width: min-content;
-  gap: var(--dot-gap);
-  /* temp */
-  /* background-color: black; */
+  max-width: calc(var(--dot-size) * var(--max-h-dots) + var(--dot-gap) * (var(--max-h-dots) - 1));
 
-  /* dot widths */
-  grid-template-columns: repeat(104, min-content);
-  @media (width < 104rem) {
-    grid-template-columns: repeat(100, min-content);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--dot-gap);
+
+  margin-left: 6rem;
+  margin-right: 6rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  @media (width < 40rem) {
+    margin-left: 6rem;
+    margin-right: 6rem;
   }
-  @media (width < 96rem) {
-    grid-template-columns: repeat(80, min-content);
-  }
-  @media (width < 80rem) {
-    grid-template-columns: repeat(65, min-content);
+  @media (width < 48rem) {
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
   @media (width < 64rem) {
-    grid-template-columns: repeat(52, min-content);
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
-  @media (width < 52rem) {
-    grid-template-columns: repeat(40, min-content);
+  @media (width < 86rem) {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  @media (width < 64rem) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  @media (width < 48rem) {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
   @media (width < 40rem) {
-    grid-template-columns: repeat(32, min-content);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
+
+  /* temp */
+  /* background-color: black; */
 }
 
 .week {
